@@ -1,0 +1,103 @@
+﻿@model IEnumerable<ProductPages.Common.Models.ProductPage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index of Product Pages</h2>
+
+<section class="products">
+    <div class="product-card">
+        <div class="product-image">
+            <img src="assets/img/coat-01.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Winter Jacket</h5>
+            <h6>$99.99</h6>
+        </div>
+    </div>
+
+</section>
+
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NameOfProduct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaintainerOfProduct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Created)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Updated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SystemDocumentationUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamCityProjectUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OctopusDeployProjectUrl)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaintainerOfProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Updated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemDocumentationUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamCityProjectUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OctopusDeployProjectUrl)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

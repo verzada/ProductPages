@@ -1,0 +1,78 @@
+﻿@model ProductPages.Common.Models.ProductPage
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ProductPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NameOfProduct" class="control-label"></label>
+                <input asp-for="NameOfProduct" class="form-control" />
+                <span asp-validation-for="NameOfProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintainerOfProduct" class="control-label"></label>
+                <input asp-for="MaintainerOfProduct" class="form-control" />
+                <span asp-validation-for="MaintainerOfProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Updated" class="control-label"></label>
+                <input asp-for="Updated" class="form-control" />
+                <span asp-validation-for="Updated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedBy" class="control-label"></label>
+                <input asp-for="UpdatedBy" class="form-control" />
+                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SystemDocumentationUrl" class="control-label"></label>
+                <input asp-for="SystemDocumentationUrl" class="form-control" />
+                <span asp-validation-for="SystemDocumentationUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamCityProjectUrl" class="control-label"></label>
+                <input asp-for="TeamCityProjectUrl" class="form-control" />
+                <span asp-validation-for="TeamCityProjectUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OctopusDeployProjectUrl" class="control-label"></label>
+                <input asp-for="OctopusDeployProjectUrl" class="form-control" />
+                <span asp-validation-for="OctopusDeployProjectUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -4,20 +4,26 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index of Product Pages</h2>
+<h2>Product Pages</h2>
 
-<section class="products">
-    <div class="product-card">
-        <div class="product-image">
-            <img src="assets/img/coat-01.jpeg">
-        </div>
-        <div class="product-info">
-            <h5>Winter Jacket</h5>
-            <h6>$99.99</h6>
-        </div>
-    </div>
-
-</section>
+<div class="container">
+ 
+    <div class="row"></div>
+   @{
+       //for (var i = 0; i < 30; i++)
+       //{
+       foreach (var item in Model)
+       {
+    <div class="col-xs-6 col-lg-4">
+        <h2>@Html.DisplayName(item.NameOfProduct)</h2>
+        <img src="~/images/product.png" height="300px" width="300px" />
+        <p>@Html.Raw(item.Description)</p>
+        <p><a class="btn btn-default" asp-action="Details" asp-route-id="@item.Id">Details</a></p>
+    </div><!--/.col-xs-6.col-lg-4-->
+           }
+      //}
+   }
+</div>
 
 
 @*<p>

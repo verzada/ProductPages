@@ -20,8 +20,15 @@ namespace ProductPages.WebPage.MVC.Controllers
         }
 
         // GET: ProductPages
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string tagname)
         {
+            
+            var productPages = _context.ProductPages;
+            if (productPages.Any())
+            {
+
+            }
+
             return View(await _context.ProductPages.ToListAsync());
         }
 

@@ -1,0 +1,109 @@
+﻿@model IEnumerable<ProductPages.Common.Models.ProductPage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Product Pages</h2>
+
+<div class="container">
+ 
+    <div class="row"></div>
+   @{
+       //for (var i = 0; i < 30; i++)
+       //{
+       foreach (var item in Model)
+       {
+    <div class="col-xs-6 col-lg-4">
+        <h2>@Html.DisplayName(item.NameOfProduct)</h2>
+        <img src="~/images/product.png" height="300px" width="300px" />
+        <p>@Html.Raw(item.Description)</p>
+        <p><a class="btn btn-default" asp-action="Details" asp-route-id="@item.Id">Details</a></p>
+    </div><!--/.col-xs-6.col-lg-4-->
+           }
+      //}
+   }
+</div>
+
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NameOfProduct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaintainerOfProduct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Created)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Updated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SystemDocumentationUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamCityProjectUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OctopusDeployProjectUrl)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaintainerOfProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Updated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SystemDocumentationUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamCityProjectUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OctopusDeployProjectUrl)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
